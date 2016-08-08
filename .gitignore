@@ -1,5 +1,6 @@
 _site
 .DS_Store
+<<<<<<< HEAD
 *.sublime-project
 *.sublime-workspace
 codekit-config.json
@@ -7,3 +8,13 @@ node_modules
 Gemfile.lock
 .sass-cache
 .jekyll-metadata
+=======
+.jekyll
+.jekyll-metadata
+.bundle
+.sass-cache
+Gemfile
+Gemfile.lock
+node_modules
+package.json
+>>>>>>> 8b0af42b48b5bacc5fd504ba0bed8aa897635d2c
