@@ -17,7 +17,7 @@ tags:
 * Permite exportar a múltiples plataformas de escritorio, móviles y web de manera nativa (sin necesidad de plugins ni runtimes)
 
 
-Éste es el primero de una serie de tutoriales de Haxeflixel.
+Éste es el primero de una serie de tutoriales en los que aboradaré el uso de las distintas partes del motor Haxeflixel. Aquí hay un índice de los artículos publicados hasta el momento:
 
 <ul>
 {% for post in site.posts reversed %}
@@ -26,7 +26,7 @@ tags:
       {% if page.title != post.title %}
         <li><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></li>
       {% else %}
-        <li>{{ post.title }} (este post)</li>
+        <li>{{ post.title }} (éste artículo)</li>
       {% endif %}
     {% endif %}
   {% endfor %}
