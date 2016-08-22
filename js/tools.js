@@ -64,3 +64,17 @@ function createPhotoGallery(elemIdStr, autoPlayTime = 3000){
     timer = setTimeout(timedNext, autoPlayTime);
   }
 }
+
+
+function showModalExample(exampleName){
+  $("#mm_modal").modal();
+  /*var overlay = $("#modal_overlay");
+  if(overlay === 0){
+    // no existe
+    // los crea
+    $("body").append('<div id="modal_overlay></div>"');
+    showModalExample(exampleName)
+  }else{
+    overlay.show();
+  }*/
+}

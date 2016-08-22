@@ -1,0 +1,17 @@
+<div class="swf_example_outer_container">
+  <div class="swf_example_inner_container">
+    <img class="swf_example_img" src="{{site.baseurl}}/images/snap/{{include.example_name}}.png" />
+    <div class="swf_example_screen"></div>
+    <div class="swf_example_button_container">
+      <a class="swf_example_button" href="#modal_content_{{include.modalid}}" rel="modal:open">
+        <img src="{{site.baseurl}}/images/play_button.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="modal_content_{{include.modalid}}" style="display:none; width:700px; height:500;">
+  <object data="https://cdn.rawgit.com/pabab/pvj2-fichunl-code/master/_swf/{{include.example_name}}.swf" src="https://cdn.rawgit.com/pabab/pvj2-fichunl-code/master/_swf/{{include.example_name}}.swf" type="application/x-shockwave-flash" width="640" height="480">
+    <param name="movie" value="https://cdn.rawgit.com/pabab/pvj2-fichunl-code/master/master/_swf/{{include.example_name}}.swf" />
+  </object>
+</div>
