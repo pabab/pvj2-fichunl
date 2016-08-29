@@ -17,4 +17,5 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+commit.txt
 >>>>>>> 8b0af42b48b5bacc5fd504ba0bed8aa897635d2c

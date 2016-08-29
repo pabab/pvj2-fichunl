@@ -28,7 +28,31 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+  position: relative;
 }
+
+.sidebar {
+  @media screen and (min-width: 1200px){
+    font-size: 22px;
+    line-height: 32px;
+    width: 150px;
+    position: absolute;
+    left: -200px;
+    text-align: right;
+    display: block;
+    display: none;
+  }
+  display: none;
+}
+
+.sidebar ul{
+  list-style-type: none;
+}
+
+.sidebar ul li{
+  border-bottom: 1px solid #ccc;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;

@@ -4,9 +4,31 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
+    <article class="post" style="margin-bottom: 40px;">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <div class="date" style="margin-bottom: 0px;">
+        {% assign m = post.date | date: "%m" %}
+        {{ post.date | date: "%e de " }}
+        {% case m %}
+          {% when '01' %}Enero
+          {% when '02' %}Febrero
+          {% when '03' %}Marzo
+          {% when '04' %}Abril
+          {% when '05' %}Mayo
+          {% when '06' %}Junio
+          {% when '07' %}Julio
+          {% when '08' %}Agosto
+          {% when '09' %}Septiembre
+          {% when '10' %}Octubre
+          {% when '11' %}Noviembre
+          {% when '12' %}Diciembre
+        {% endcase %}
+        {{ post.date | date: " %Y" }}
+      </div>
+      <h1 style="margin-top: 0px;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+
+
 
       <div class="entry">
         {{ post.excerpt }}
