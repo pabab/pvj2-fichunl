@@ -99,7 +99,7 @@ Una vez se hayan agregado las animaciones al personaje se puede indicar, mediant
 
 Finalmente, para que el personaje se anime correctamente, será necesario espejar la imagen horizontalmente según el se mueva en uno u otro sentido. Para esto se utiliza el atributo *flipX* de la clase **FlxSprite**.
 
-Debajo puede apreciarse el ejemplo en funcionamiento.
+Debajo puede apreciarse el ejemplo en funcionamiento. Pueden descargar el código fuente del ejemplo [aquí](http://github.com/pabab/pvj2-fichunl-code/blob/master/_zip/animated_character.zip?raw=true).
 
 {% include swf_example.html example_name="animated_character" modalid="1" %}
 
@@ -109,12 +109,12 @@ En artículo explicamos cómo crear una nueva clase para el personaje principal 
 
 En el ejemplo, el manejo de entrada (lectura del estado del teclado) se realiza dentro del método *update()* de la clase del sprite y no de la escena. Si bien muchos recomiendan que el manejo de entrada se realice de manera unificada (es decir, todo desde una misma función), otro enfoque cómodo y que también brinda cierta prolijidad es que cada entidad gestione su propia entrada dentro de su clase, dejando así el método *update()* de la escena para codificar allí las reglas de la mecánica del juego.
 
-En los próximos tutoriales aprenderemos a crear otras entidades con las que el personaje pueda interactuar, como un items y un nivel.
+En los próximos tutoriales aprenderemos a crear otras entidades con las que el personaje pueda interactuar, como items y un nivel.
 
-<script type="text/javascript">
-
-  $.get("https://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/animated_character/source/Character.hx", function(data, status){
-    $('#example_character').text(data);
-    SyntaxHighlighter.all()
-  })
+<script>
+  $(document).ready(function(){
+    var ch = new CodeHelper();
+    ch.add('https://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/animated_character/source/Character.hx', '#example_character');
+    ch.go(SyntaxHighlighter.all);
+  });
 </script>

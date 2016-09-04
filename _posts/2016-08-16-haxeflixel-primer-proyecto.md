@@ -91,9 +91,6 @@ class PlayState extends FlxState
 </pre>
 	</div>
 
-<script type="text/javascript">
-    SyntaxHighlighter.all()
-</script>
 
  Como se ve en el código, en el lenguaje Haxe las palabras reservadas **class** y **extends** se utilizan para definir una clase e indicar que ésta hereda de otra. La clase **PlayState** hereda de [**FlxState**](http://api.haxeflixel.com/flixel/FlxState.html), que es la clase de utilizada pra representar escenas en Haxeflixel. Como se pueden imaginar, en Haxe, al igual que en otros lenguajes como Java, el nombre del archivo coincide con el nombre de la clase que se define en su interior.
 
@@ -116,3 +113,10 @@ Debajo pueden observar el ejemplo en funcionamiento, y pueden descargar el códi
 En éste artículo mostramos la estructura de un proyecto en Haxeflixel. Por ser un motor basado en herencia, definimos una escena heredando de la clase **FlxState** y redefiniendo sus métodos.
 
 En el siguiente tutorial explicaremos cómo redefinir el método *update()* para agregar logica a la escena.
+
+
+<script>
+    $.ready(function(){
+      SyntaxHighlighter.all();
+    });
+</script>

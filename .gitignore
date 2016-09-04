@@ -1,5 +1,6 @@
 _site
 .DS_Store
+TODO.txt
 <<<<<<< HEAD
 *.sublime-project
 *.sublime-workspace

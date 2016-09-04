@@ -64,39 +64,7 @@ A continuación vamos a mostrar programa simple en el que se mueve un sprite mod
 Debajo se muestra el contenido del archivo *"PlayState.hx"* del ejemplo, el cual es bastante similar al del tutorial anterior.
 
 <div class="code_container">
-<pre name="code" class="brush: haxe; toolbar: false; gutter: false;">
-import flixel.FlxState;
-import flixel.FlxSprite;
-import flixel.FlxG;
-
-class PlayState extends FlxState
-{
-  override public function create():Void
-  {
-    super.create();
-    sprite = new FlxSprite(100, 100, "assets/images/ImpGuy_0.jpg");
-    add(sprite);
-  }
-
-  override public function update(elapsed):Void
-  {
-    super.update(elapsed);
-    if(FlxG.keys.pressed.A)
-    {
-      sprite.velocity.x = -200;
-    }
-    else if(FlxG.keys.pressed.D)
-    {
-      sprite.velocity.x = 200;
-    }
-    else
-    {
-      sprite.velocity.x = 0;
-    }
-  }
-
-  private var sprite: FlxSprite;
-}
+<pre name="code" class="brush: haxe; toolbar: false; gutter: false;" id="example_sprite_movement_linear">
 </pre>
 </div>
 
@@ -131,45 +99,9 @@ De la misma manera que al asignar un valor a la velocidad del sprite el motor ac
 Debajo se observa el código fuente de un ejemplo en el que el movimiento del sprite se realiza de manera acelerada.
 
 <div class="code_container">
-<pre name="code" class="brush: haxe; toolbar: false; gutter: false;">
-import flixel.FlxSprite;
-import flixel.FlxG;
-
-class Character extends FlxSprite
-{
-	public function new(X: Float, Y: Float)
-	{
-		super(X, Y, "assets/images/ImpGuy_0.jpg");
-		drag.x = SPRITE_DRAG;
-		maxVelocity.x = SPRITE_MAXVEL;
-	}
-
-	override public function update(elapsed):Void
-	{
-		super.update(elapsed);
-		if(FlxG.keys.pressed.A)
-		{
-			acceleration.x = -SPRITE_ACCEL;
-		}
-		else if(FlxG.keys.pressed.D)
-		{
-			acceleration.x = SPRITE_ACCEL;
-		}
-		else
-		{
-			acceleration.x = 0;
-		}
-	}
-  private static inline var SPRITE_ACCEL: Float = 200;
-  private static inline var SPRITE_MAXVEL: Float = 200;
-  private static inline var SPRITE_DRAG: Float = 200;
-}
+<pre name="code" class="brush: haxe; toolbar: false; gutter: false;" id="example_sprite_movement_accel">
 </pre>
-	</div>
-
-<script type="text/javascript">
-    SyntaxHighlighter.all()
-</script>
+</div>
 
 Los valores de los atributos *maxVelocity* y *drag* del sprite se pueden fijar durante la inicialización de la escena, ya que no sufrirán cambios luego.
 
@@ -197,3 +129,13 @@ Si se eligen bien los valores para la aceleración, velocidad máxima y drag, es
 ## Conclusión
 
 En éste artículo mostramos como mover un sprite mediante el teclado utilizando dos tipos distintos de movimiento. Se recomienda dar una mirada a la documentación de Haxeflixel para las clases utilizadas hasta el momento ([**FlxState**](http://api.haxeflixel.com/flixel/FlxState.html), [**FlxSprite**](http://api.haxeflixel.com/flixel/FlxSprite.html), [**FlxPoint**](http://api.haxeflixel.com/flixel/math/FlxPoint.html) y [**FlxG**](http://api.haxeflixel.com/flixel/FlxG.html)) para tener una mejor idea general de las funciones del motor.
+
+
+<script>
+  $(document).ready(function(){
+    var ch = new CodeHelper();
+    ch.add('http://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_linear/source/PlayState.hx', '#example_sprite_movement_linear');
+    ch.add('http://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_accel/source/PlayState.hx', '#example_sprite_movement_accel');
+    ch.go(SyntaxHighlighter.all);
+  });
+</script>

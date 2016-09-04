@@ -68,13 +68,31 @@ function createPhotoGallery(elemIdStr, autoPlayTime = 3000){
 
 function showModalExample(exampleName){
   $("#mm_modal").modal();
-  /*var overlay = $("#modal_overlay");
-  if(overlay === 0){
-    // no existe
-    // los crea
-    $("body").append('<div id="modal_overlay></div>"');
-    showModalExample(exampleName)
-  }else{
-    overlay.show();
-  }*/
+
+}
+
+
+function CodeHelper(){
+  var elems = [];
+
+  this.add = function(codeUrl, elemId){
+    elems.push({url: codeUrl, elemId: elemId, loaded: false});
+  }
+
+  var allLoaded = function(){
+    for(var i = 0; i<elems.length; i++){
+      if(!elems[i].loaded) return false;
+    }
+    return true;
+  }
+
+  this.go = function(finishCallback){
+    elems.forEach(function(item, index){
+      $.get(item.url, function(data, status){
+        $(item.elemId).text(data);
+        elems[index].loaded = true;
+        if(allLoaded()) finishCallback();
+      })
+    });
+  }
 }
