@@ -134,8 +134,8 @@ En éste artículo mostramos como mover un sprite mediante el teclado utilizando
 <script>
   $(document).ready(function(){
     var ch = new CodeHelper();
-    ch.add('http://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_linear/source/PlayState.hx', '#example_sprite_movement_linear');
-    ch.add('http://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_accel/source/PlayState.hx', '#example_sprite_movement_accel');
+    ch.add('https://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_linear/source/PlayState.hx', '#example_sprite_movement_linear');
+    ch.add('https://raw.githubusercontent.com/pabab/pvj2-fichunl-code/master/sprite_movement_accel/source/PlayState.hx', '#example_sprite_movement_accel');
     ch.go(SyntaxHighlighter.all);
   });
 </script>
