@@ -33,24 +33,18 @@
             <h1 class="site-name">{{ site.name }}</h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
-          <!--
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="{{ site.baseurl }}/games">Trabajos</a>
             <a href="{{ site.baseurl }}/about">Acerca de</a>
           </nav>
-        -->
         </header>
+
       </div>
     </div>
 
+
     <div id="main" role="main" class="container">
-      <div class="sidebar">
-        <ul>
-          <li><a href=" {{site.baseurl }}/about">Acerca de</a></li>
-          <li><a href=" {{site.baseurl }}/">Artículos</a></li>
-          <!--<li>Trabajos Destacados</li>-->
-        </ul>
-      </div>
       {{ content }}
     </div>
 
