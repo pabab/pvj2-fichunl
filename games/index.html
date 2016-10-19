@@ -1,0 +1,39 @@
+---
+layout: default
+games:
+
+ - title: Star Crucible
+   author: Diego Ponce de León
+   brief: On board the Ark, a ship designed to reach the farthest corners of the galaxy, you'll visit new and amazing worlds, filled with strange life forms. Your mission is to command the lander module in order to retrieve the DNA samples of the various life forms inhabiting the planet.
+   link: https://diegosolo.itch.io/star-crucible-test
+
+ - title: Star Blaster
+   author: Sergio Ariel Barrionuevo
+   brief: Simple 2D sidescrolling shmup
+   link: https://stratoserge.itch.io/star-blaster
+
+ - title: "Classic Heroes: Prologue"
+   author: Emanuel Oscar Nicolás Segretín
+   brief: Short platformer inspired on Little Samson and the buggy earlier Rockman enemy spawn system.
+   gamelink: https://eons.itch.io/classic-heroes-prologue
+   imglink: https://img.itch.io/aW1hZ2UvNzE4NjgvMzI5OTQ5LnBuZw==/315x250%23c/%2BT40q7.png
+   date: askjdh
+
+ - title: P-Changer
+   author: Alejandro Coria Bayer
+   brief: Puzzle video game in English and Spanish
+   link: https://darkphantom.itch.io/p-changer
+---
+
+{% for game in page.games %}
+  <div class="gameentry">
+    <img class="snapshot" src="{{ game.imglink }}"></img>
+      <div class="brief">
+      <h1>{{ game.title }}</h1>
+      <div class="date"> {{game.date}} {{game.author}} </div>
+
+        <p>{{ game.brief }}</p>
+        <div class="author"> </div>
+      </div>
+  </div>
+{% endfor %}
