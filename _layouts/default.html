@@ -33,13 +33,14 @@
             <h1 class="site-name">{{ site.name }}</h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
-          <!--
+
+          {% assign current = page.url | downcase | split: '/' %}
           <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/games">Trabajos</a>
-            <a href="{{ site.baseurl }}/about">Acerca de</a>
+            <a {% if page.url != '/'  %}href="{{ site.baseurl }}/"{% else %}class="current"{% endif %}>Blog</a>
+            <a {% if current[1] != 'games' %}href="{{ site.baseurl }}/games"{% else %}class="current"{% endif %}>Trabajos</a>
+            <a {% if current[1] != 'about' %}href="{{ site.baseurl }}/about"{% else %}class="current"{% endif %}>Acerca de</a>
           </nav>
-        -->
+
         </header>
 
       </div>

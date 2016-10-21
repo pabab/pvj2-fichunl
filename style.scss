@@ -248,7 +248,7 @@ nav {
   margin: 0 auto;
   margin-top:10px;
   a {
-    color: $blue;
+    color: $lightBlue;
     margin-left: 20px;
     text-align: right;
     font-weight: 300;
@@ -257,6 +257,14 @@ nav {
     @include mobile {
       margin: 0 10px;
     }
+  }
+  a:hover{
+    color: $blue;
+  }
+  a.current{
+    font-weight: bold;
+    color: $slightDarkerBlue;
+    cursor: default;
   }
 }
 
@@ -450,6 +458,9 @@ footer {
     border-radius: 5px;
     max-width: 200px;
   }
+  .snapshot:hover {
+    box-shadow: 0px 0px 15px $lightBlue;
+  }
 
   .brief{
     float: left;
@@ -457,10 +468,14 @@ footer {
     clear: right;
     padding-left: 10px;
     margin-left: 10px;
-    h1{
+    h1 {
       font-size: 28px;
       margin-top: 0px;
       margin-bottom: 0px;
+
+    }
+    h1:hover {
+      color: $blue;
     }
     p {
 
