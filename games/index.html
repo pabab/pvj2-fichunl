@@ -37,7 +37,7 @@ games:
 
 {% for game in page.games %}
   <div class="gameentry">
-    <a href="{{ game.link }}"><img class="snapshot" src="http://127.0.0.1:4000/pvj2-fichunl/images/games/{{ game.image }}"></img></a>
+    <a href="{{ game.link }}"><img class="snapshot" src="{{ site.url }}/images/games/{{ game.image }}"></img></a>
       <div class="brief">
       <a href="{{ game.link }}"><h1>{{ game.title }}</h1></a>
       <div class="date"> {{game.author}} - {{game.date}} </div>
